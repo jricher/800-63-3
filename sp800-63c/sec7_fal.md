@@ -10,8 +10,8 @@ The FAL combines aspects of [federation model](#sec4), [assertion protection str
 |:--:|----|
 |1|Bearer assertion, direct presentation, asymmetrically signed by CSP|
 |2|Bearer assertion, indirect presentation, asymmetrically signed by CSP|
-|3|Bearer assertion, indirect presentation, asymmetrically signed by CSP and encrypted to RP|
-|4|Holder of key assertion, indirect presentation, asymmetrically signed by CSP and encrypted to RP|
+|3|Bearer assertion, indirect or direct presentation, asymmetrically signed by CSP and encrypted to RP|
+|4|Holder of key assertion, indirect or direct presentation, asymmetrically signed by CSP and encrypted to RP|
 
 For example, FAL 1 maps to the OpenID Connect Implicit Client profile or the SAML Web SSO profile, with no additional features. FAL 2 maps to the OpenID Connect Basic Client profile or the SAML Artifact Binding profile, with no additional features. FAL 3 additionally requires that the OpenID Connect ID Token or SAML Assertion be encrypted to a public key representing the RP in question. FAL 4 requires the presentation of an additional key bound to the assertion (for example, a FIDO token) along with all requirements of FAL3.
 
